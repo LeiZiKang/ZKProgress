@@ -13,6 +13,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ItemView(title: "CircleWave") {
+                    // TODO: 添加一个slider，可以和progress Binding
                     ZKProgress.CircleWave(progress: 0.64)
                         .padding()
                 }
