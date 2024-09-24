@@ -22,9 +22,13 @@ struct ItemView<Destination: View>: View {
     
     
     // MARK: View
-
+    
     var body: some View {
-        NavigationLink(destination: LazyView(self.destination)) {
+        NavigationLink(destination:
+            LazyView(self.destination)
+            .navigationTitle(self.title)
+            .navigationBarTitleDisplayMode(.inline)
+        ) {
             VStack(alignment: .leading) {
                 Text(self.title)
                     .font(.headline)
