@@ -12,13 +12,15 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-//                switch ZKProgress {
-//                case .Wave:
-//                    ZKProgress.WaveProgress.view(progress: 0.64)
-//                }
+                ItemView(title: "CircleWave") {
+                    ZKProgress.CircleWave(progress: 0.64)
+                        .padding()
+                }
             }
+            .listStyle(.plain)
+            .padding(.top, 10)
+            .navigationTitle("ZKProgress")
         }
-        .padding()
     }
 }
 
