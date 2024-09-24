@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DD3668522CA349600055EC40 /* ZKProgress in Frameworks */ = {isa = PBXBuildFile; productRef = DD3668512CA349600055EC40 /* ZKProgress */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DD3668252CA161D30055EC40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3668522CA349600055EC40 /* ZKProgress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
+				DD3668512CA349600055EC40 /* ZKProgress */,
 			);
 			productName = Demo;
 			productReference = DD3668142CA161D10055EC40 /* Demo.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = DD36680B2CA161D10055EC40;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DD3668502CA349600055EC40 /* XCLocalSwiftPackageReference "../../ZKProgress" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DD3668152CA161D10055EC40 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		DD3668502CA349600055EC40 /* XCLocalSwiftPackageReference "../../ZKProgress" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../ZKProgress;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD3668512CA349600055EC40 /* ZKProgress */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZKProgress;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD36680C2CA161D10055EC40 /* Project object */;
 }
