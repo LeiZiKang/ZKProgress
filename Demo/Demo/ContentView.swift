@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import ZKProgress
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+//                switch ZKProgress {
+//                case .Wave:
+//                    ZKProgress.WaveProgress.view(progress: 0.64)
+//                }
+            }
         }
         .padding()
     }
