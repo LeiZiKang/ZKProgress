@@ -12,13 +12,11 @@ extension ZKProgress {
     @available(iOS 13.0, *)
     public struct CircleWave: View {
         @State private var waveOffset: Angle = .zero
-        @State public var progress: Double
+        @Binding public var progress: Double
         @State private var xOffset: CGFloat = .zero
-        
-       public init(waveOffset: Angle = .zero, progress: Double, xOffset: CGFloat = .zero) {
-            self.waveOffset = waveOffset
-            self.progress = progress
-            self.xOffset = xOffset
+
+        public    init(progress: Binding<Double>) {
+            self._progress = progress
         }
         
         public var body: some View {
