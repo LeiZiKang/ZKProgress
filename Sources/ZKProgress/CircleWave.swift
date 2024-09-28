@@ -14,25 +14,26 @@ extension ZKProgress {
         @State private var waveOffset: Angle = .zero
         @Binding public var progress: Double
         @State private var xOffset: CGFloat = .zero
-
-        public    init(progress: Binding<Double>) {
+        var color: Color
+        public    init(progress: Binding<Double>,  color: Color = .blue) {
             self._progress = progress
+            self.color = color
         }
         
         public var body: some View {
             ZStack {
-                Circle().stroke(.blue, lineWidth: 2)
+                Circle().stroke(color, lineWidth: 2)
                 WaveShape(offset: waveOffset, percent: progress, xOffset: 0)
-                    .fill(.blue.opacity(0.4))
+                    .fill(color.opacity(0.4))
                     .clipShape (Circle())
                 
                 WaveShape(offset: waveOffset + .degrees(60), percent: progress, xOffset: 0.7)
-                    .fill(.blue.opacity(0.4))
+                    .fill(color.opacity(0.4))
                     .clipShape (Circle())
                 
                 Text ("\(Int (progress * 100))%")
                     .font(.system(size: 140, weight: .bold, design: .rounded))
-                    .foregroundColor(.blue)
+                    .foregroundColor(color)
             }
             .aspectRatio (1, contentMode: . fit)
             .onAppear {
